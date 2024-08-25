@@ -1,6 +1,7 @@
 import React from "react";
 import companyLogo from "../../Assets/logo_4x.png";
 import { navMenu } from "./Utilities";
+import { Link } from "react-router-dom";
 const SideBar = () => {
   return (
     <section
@@ -21,7 +22,20 @@ const SideBar = () => {
       >
         <ul className=" flex flex-col gap-4">
           {navMenu.map((elem, index) => {
-            return <li key={index} className="flex items-center gap-3"></li>;
+            return (
+              <Link to={`/${elem.title}`}>
+                <li key={index} className="flex items-center gap-3">
+                  <span>
+                    <img
+                      src={elem.logo}
+                      alt={`${elem.title}-logo`}
+                      className="max-w-full h-auto"
+                    />
+                  </span>
+                  <span>{elem.title}</span>
+                </li>
+              </Link>
+            );
           })}
         </ul>
       </div>
