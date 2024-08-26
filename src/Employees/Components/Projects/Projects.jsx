@@ -3,6 +3,10 @@ import BtnCard from "./BtnCard";
 import { CardData } from "./Utilities";
 import { BsArrowLeft } from "react-icons/bs";
 import Details from "./Details";
+import Requirements from "./Requirements";
+import Teams from "./Teams";
+import Settings from "./Settings";
+import Invoice from "./Invoice";
 const Projects = () => {
   const [activeCard, setActiveCard] = useState("Details");
 
@@ -28,8 +32,12 @@ const Projects = () => {
           />
         ))}
       </div>
-      <div className="active-card-page">
+      <div className="active-card-page p-2">
         {activeCard === "Details" && <Details />}
+        {activeCard === "Functional Requirements" && <Requirements />}
+        {activeCard === "Team" && <Teams />}
+        {activeCard === "Setting" && <Settings />}
+        {activeCard === "Invoice" && <Invoice />}
       </div>
     </section>
   );
