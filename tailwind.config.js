@@ -11,6 +11,7 @@ module.exports = {
         "primary-txt-dash": "#898384",
         "page-btn-primary": "#032858",
         "hover-primary": "#032858",
+        "page-btn-secondary": "#D9D9D9",
       },
     },
   },

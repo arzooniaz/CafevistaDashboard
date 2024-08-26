@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import logoutLogo from "../../Assets/logoutLogo.svg";
 import { MdLogout } from "react-icons/md";
 
-const SideBar = () => {
+const SideBar = ({ HandleActivePageBtn }) => {
   const [isActive, setIsActive] = useState("Dashboard");
   return (
     <section
@@ -30,7 +30,10 @@ const SideBar = () => {
               <Link to="/" className="">
                 <li
                   key={index}
-                  onClick={() => setIsActive(elem.title)}
+                  onClick={() => {
+                    setIsActive(elem.title);
+                    HandleActivePageBtn(elem);
+                  }}
                   className={`flex py-2 px-10 items-center gap-3 hover:bg-hover-primary   group  w-auto mx-auto rounded-md ${
                     isActive == elem.title ? "bg-hover-primary " : ""
                   }`}

@@ -1,11 +1,3 @@
-import dashboardLogo from "../../Assets/dashboardLogo.svg";
-import chatLogo from "../../Assets/chatLogo.svg";
-import logoutLogo from "../../Assets/logoutLogo.svg";
-import pricingLogo from "../../Assets/pricingLogo.svg";
-import projectsLogo from "../../Assets/projectsLogo.svg";
-import settingsLogo from "../../Assets/settingsLogo.svg";
-import teamLogo from "../../Assets/teamLogo.svg";
-
 import { PiCommandLight } from "react-icons/pi";
 import { RiHomeLine } from "react-icons/ri";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
