@@ -5,33 +5,40 @@ import pricingLogo from "../../Assets/pricingLogo.svg";
 import projectsLogo from "../../Assets/projectsLogo.svg";
 import settingsLogo from "../../Assets/settingsLogo.svg";
 import teamLogo from "../../Assets/teamLogo.svg";
+
+import { PiCommandLight } from "react-icons/pi";
+import { RiHomeLine } from "react-icons/ri";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { GrGroup } from "react-icons/gr";
+import { BsChatRight } from "react-icons/bs";
+import { CiSettings } from "react-icons/ci";
 export const navMenu = [
   {
     title: "Dashboard",
-    logo: dashboardLogo,
+    logo: RiHomeLine,
   },
   {
     title: "Projects",
-    logo: projectsLogo,
+    logo: PiCommandLight,
   },
   {
     title: "Pricing",
-    logo: pricingLogo,
+    logo: RiMoneyDollarCircleLine,
   },
   {
     title: "Team",
-    logo: teamLogo,
+    logo: GrGroup,
   },
   {
     title: "Chats",
-    logo: chatLogo,
+    logo: BsChatRight,
   },
   {
     title: "Settings",
-    logo: settingsLogo,
+    logo: CiSettings,
   },
-  {
-    title: "Logout",
-    logo: logoutLogo,
-  },
+  // {
+  //   title: "Logout",
+  //   logo: logoutLogo,
+  // },
 ];
