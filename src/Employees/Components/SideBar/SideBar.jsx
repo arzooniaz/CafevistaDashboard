@@ -27,7 +27,7 @@ const SideBar = ({ HandleActivePageBtn }) => {
         <ul className="flex flex-col gap-4 w-full">
           {navMenu.map((elem, index) => {
             return (
-              <Link to="/" className="">
+              <div>
                 <li
                   key={index}
                   onClick={() => {
@@ -53,20 +53,18 @@ const SideBar = ({ HandleActivePageBtn }) => {
                     {elem.title}
                   </span>
                 </li>
-              </Link>
+              </div>
             );
           })}
         </ul>
       </div>
       <div id="logout" className="px-10 mt-auto">
-        <Link to="/logout">
-          <div className="flex items-center gap-3">
-            <span>
-              <MdLogout className="max-w-full h-auto" />
-            </span>
-            <span>Logout</span>
-          </div>
-        </Link>
+        <div className="flex items-center gap-3">
+          <span>
+            <MdLogout className="max-w-full h-auto" />
+          </span>
+          <span>Logout</span>
+        </div>
       </div>
     </section>
   );
