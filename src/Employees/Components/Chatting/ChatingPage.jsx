@@ -19,19 +19,19 @@ const ChattingPage = () => {
   return (
     <section
       id="Chat-Page"
-      className=" min-h-screen grid sm:grid-cols-12 gap-2 p-4"
+      className=" min-h-screen grid lg:grid-cols-12 gap-2 p-4"
     >
       <div
-        className={`sm:col-span-4 min-h-screen ${
+        className={`lg:col-span-4 min-h-screen ${
           !checkClicked ? "block" : "hidden"
-        } sm:block`}
+        } lg:block`}
       >
         <MessagesList HandleClickedChat={HandleClickedChat} />
       </div>
       <div
-        className={`sm:col-span-5 ${
+        className={`lg:col-span-5 ${
           checkClicked ? "block" : "hidden"
-        } sm:block min-h-screen`}
+        } lg:block min-h-screen`}
       >
         <ChatWindow
           ChatData={openedChat}
@@ -39,7 +39,7 @@ const ChattingPage = () => {
           HandleBackFunctionality={HandleBackFunctionality}
         />
       </div>
-      <div className="sm:col-span-3 hidden sm:flex min-h-screen  flex-col gap-2">
+      <div className="lg:col-span-3 hidden lg:flex min-h-screen  flex-col gap-2">
         <div>
           <UserProfile ChatData={openedChat} />
         </div>

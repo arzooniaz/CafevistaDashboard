@@ -4,6 +4,7 @@ import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GrGroup } from "react-icons/gr";
 import { BsChatRight } from "react-icons/bs";
 import { CiSettings } from "react-icons/ci";
+import { MdLogout } from "react-icons/md";
 export const navMenu = [
   {
     title: "Dashboard",
@@ -29,8 +30,8 @@ export const navMenu = [
     title: "Settings",
     logo: CiSettings,
   },
-  // {
-  //   title: "Logout",
-  //   logo: logoutLogo,
-  // },
+  {
+    title: "Logout",
+    logo: MdLogout,
+  },
 ];

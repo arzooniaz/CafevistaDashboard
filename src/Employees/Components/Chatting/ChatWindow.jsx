@@ -26,7 +26,7 @@ const ChatWindow = ({
             <h2>{mail}</h2>
           </div>
         </div>
-        <div className="back-btn block sm:hidden p-2">
+        <div className="back-btn block lg:hidden p-2">
           <button
             className="bg-[#D8D8D8] p-2 rounded-lg"
             onClick={HandleBackFunctionality}
@@ -35,7 +35,7 @@ const ChatWindow = ({
           </button>
         </div>
       </div>
-      <div className="Chatting-content p-5 flex-1 overflow-y-auto max-h-[82vh]">
+      <div className="Chatting-content p-5 flex-1 overflow-y-auto max-h-screen lg:max-h-[82vh] ">
         {Messages.map((elem, index) => {
           return elem.senderId !== "user" ? (
             elem.type === "text" ? (
