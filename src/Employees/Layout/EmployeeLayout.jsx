@@ -3,7 +3,8 @@ import SideBar from "../Components/SideBar/SideBar";
 import NavBar from "../Components/NavBar/NavBar";
 import { RiHomeLine } from "react-icons/ri";
 import Projects from "../Components/Projects/Projects";
-import { ChattingPage, DashBoard } from "../../Imports";
+
+import { ChattingPage, DashBoard, Pricing } from "../../Imports";
 
 const EmployeeLayout = () => {
   const [activePageBtn, setActivePageBtn] = useState({
@@ -28,7 +29,10 @@ const EmployeeLayout = () => {
           <div className="main-pages min-h-screen">
             {activePageBtn.title === "Projects" && <Projects />}
             {activePageBtn.title === "Chats" && <ChattingPage />}
+
             {activePageBtn.title === "Dashboard" && <DashBoard />}
+
+            {activePageBtn.title === "Pricing" && <Pricing />}
           </div>
         </div>
       </div>
