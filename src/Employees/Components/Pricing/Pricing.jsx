@@ -4,11 +4,12 @@ import PricingCard from "./PricingCard"; // Ensure the path is correct
 import { cardData } from "./Utilities";
 const Pricing = () => {
   return (
-    <div className="bg-blue-900 min-h-screen flex flex-col items-center p-6">
-      {/* Button at the top center */}
+    <div className="min-h-screen bg-[#032858] flex flex-col items-center p-6">
+                 {/* Button at the top center */}
       <div className="w-full flex justify-start mb-6">
-        <button className="flex items-center px-6 py-3 bg-gray-300 text-gray-800 rounded-full hover:bg-gray-400 transition duration-300 ease-in-out">
-          <FaArrowLeft />
+      <button className="flex items-center px-6 py-3 bg-[#cccbcb] text-gray-800 rounded-md hover:bg-gray-400 transition duration-300 ease-in-out">
+   
+<FaArrowLeft />
           <span className="mr-2">Choose Your Plan</span>
         </button>
       </div>
