@@ -40,7 +40,8 @@ export default function Profile() {
     };
 
     return (
-        <div className="px-6 py-6 h-auto bg-white w-[90vw] max-w-[875px] flex flex-col rounded-md">
+        <div className="px-6 py-6 h-auto bg-white w-full w-[85vw] sm:w-[90vw] md:w-[90vw] lg:w-[75vw] xl:w-[75vw] max-w-[1200px] flex flex-col rounded-md"
+>
             <div className="relative self-center sm:self-start">
                 <img
                     src={profileImage}
