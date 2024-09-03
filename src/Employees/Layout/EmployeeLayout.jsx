@@ -4,7 +4,7 @@ import NavBar from "../Components/NavBar/NavBar";
 import { RiHomeLine } from "react-icons/ri";
 import Projects from "../Components/Projects/Projects";
 
-import { ChattingPage, DashBoard, Pricing } from "../../Imports";
+import { ChattingPage, DashBoard, Pricing, Settings } from "../../Imports";
 
 const EmployeeLayout = () => {
   const [activePageBtn, setActivePageBtn] = useState({
@@ -33,6 +33,7 @@ const EmployeeLayout = () => {
             {activePageBtn.title === "Dashboard" && <DashBoard />}
 
             {activePageBtn.title === "Pricing" && <Pricing />}
+            {activePageBtn.title === "Settings" && <Settings />}
           </div>
         </div>
       </div>
