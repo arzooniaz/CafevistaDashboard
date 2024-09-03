@@ -16,7 +16,7 @@ const Calendar = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto bg-white rounded-lg shadow-md p-3 text-xs"> {/* Restored max-width, reduced padding */}
+    <div className="max-w-lg mx-auto bg-white rounded-lg shadow-md p-4 text-xs"> {/* Restored max-width, reduced padding */}
       <div className="grid grid-cols-3 gap-1 mb-2"> {/* Reduced grid gap and margin bottom */}
         {dateRanges.map((range, index) => (
           <button key={index} className="border border-gray-300 rounded py-1 px-1 text-xs"> {/* Reduced padding and font size */}

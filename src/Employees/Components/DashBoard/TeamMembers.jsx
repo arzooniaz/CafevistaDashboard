@@ -8,13 +8,13 @@ import elipse5 from "../../Assets/Ellipse 4.png";
 const teamMembers = [
   { name: 'Elizbeth', role: 'UI designer', img: elipse3 },
   { name: 'Aurora', role: 'UI designer', img: elipse1 },
-  { name: 'Olivia', role: 'Developer', img: elipse4 },
-  { name: 'John', role: 'Developer', img: elipse5 },
+  { name: 'Olivia', role: 'Developer', img: elipse5 },
+  { name: 'John', role: 'Developer', img: elipse4 },
 ];
 
 const TeamMembers = () => {
   return (
-    <div className="px-3 py-2 max-w-md mx-auto bg-white rounded-lg shadow-md"> {/* Reduced padding and adjusted width */}
+    <div className="px-3 py-3 max-w-md mx-auto bg-white rounded-lg shadow-md"> {/* Reduced padding and adjusted width */}
       <div className="flex justify-between items-center mb-3"> {/* Reduced margin */}
         <h2 className="text-base font-semibold">Team members</h2> {/* Reduced font size */}
         <button className="text-xs text-gray-500">View all</button> {/* Reduced font size */}
@@ -25,10 +25,10 @@ const TeamMembers = () => {
             <img
               src={member.img}
               alt={`${member.name}`}
-              className="w-8 h-8 rounded-full mr-8" 
+              className="w-8 h-8 rounded-full mr-3" 
             />
             <div className="flex-grow text-left">
-              <p className=" text-sm font-medium">{member.name}</p> {/* Reduced font size */}
+              <p className=" text-sm  font-medium">{member.name}</p> {/* Reduced font size */}
               <p className="text-xs text-gray-500">{member.role}</p> {/* Reduced font size */}
             </div>
             <div className="ml-3 flex space-x-2"> {/* Reduced margin */}

@@ -32,15 +32,15 @@ const DashboardOverview = () => {
                 ))}
             </div>
 
-            <div className="border-t border-gray-500 pt-0">
+            <div className="border-t border-gray-500 pt-1">
             <div className="grid grid-cols-3 gap-3">
                 {taskData.map((task, index) => (
                     <div key={index} className="mb-2">
                         {/* Section label outside the task box */}
-                        <p className="text-small font-semibold mb-1">{task.section}</p>
+                        <p className="text-small text-center font-medium mb-1">{task.section}</p>
                         <div className="p-1 border-b border-gray-500 bg-gray-100 rounded shadow-sm">
-                            <h3 className="text-base font-semibold">{task.title}</h3>
-                            <div className="flex items-center text-xs text-gray-500">
+                            <h3 className="text-base mb-1 font-bold">{task.title}</h3>
+                            <div className="flex items-center mb-1 text-xs text-gray-500">
                                 <FaCalendarAlt className="mr-1" />
                                 <p>{task.date}</p>
                             </div>

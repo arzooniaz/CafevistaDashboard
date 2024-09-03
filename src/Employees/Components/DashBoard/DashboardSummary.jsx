@@ -10,21 +10,21 @@ const DashboardSummary = () => {
       priority: "Low",
       color: "green",
       project: "UI/UX",
-      statusColor: "bg-green-500",
+      status: ["bg-transparent", "bg-green-500", "bg-transparent", "bg-transparent"], // Color on Aug2
     },
     {
       img: elipse2,
       priority: "Medium",
       color: "pink",
       project: "UI/UX",
-      statusColor: "bg-pink-500",
+      status: ["bg-transparent", "bg-transparent", "bg-pink-500", "bg-transparent"], // Color on Aug3
     },
     {
       img: elipse3,
       priority: "High",
       color: "blue",
       project: "UI/UX",
-      statusColor: "bg-blue-500",
+      status: ["bg-transparent", "bg-transparent", "bg-transparent", "bg-blue-500"], // Color on Aug4
     },
   ];
 
@@ -38,43 +38,45 @@ const DashboardSummary = () => {
       <table className="table-auto w-full text-left text-sm">
         <thead>
           <tr>
-            <th className="px-2 py-2 font-medium">Week1</th>
-            <th className="px-2 py-2 font-medium">Priority</th>
-            <th className="px-2 py-2 font-medium">Project</th>
-            <th className="px-2 py-2 font-medium">Aug1</th>
-            <th className="px-2 py-2 font-medium">Aug2</th>
-            <th className="px-2 py-2 font-medium">Aug3</th>
-            <th className="px-2 py-2 font-medium">Aug4</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-medium">Week1</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-medium">Priority</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-medium">Project</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-medium">Aug1</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-medium">Aug2</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-medium">Aug3</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-medium">Aug4</th>
           </tr>
         </thead>
         <tbody>
           {summaryData.map((item, index) => (
             <tr key={index} className="border-b">
+              {/* Week1 column with avatars */}
               <td className="px-2 py-2">
                 <img src={item.img} alt="" className="w-6 h-6 rounded-full" />
               </td>
-              <td className="px-2 py-2">
+
+              {/* Priority column with colored circles */}
+              <td className="px-2 py-2 flex items-center">
+                <div className={`w-3 h-3 rounded-full bg-${item.color}-500 mr-2`}></div>
                 <span className={`text-${item.color}-500 font-semibold`}>
                   {item.priority}
                 </span>
               </td>
+
+              {/* Project column */}
               <td className="px-2 py-2">{item.project}</td>
-              <td className="px-2 py-2">
-                <div className={`${item.statusColor} h-2 rounded`}></div>
-              </td>
-              <td className="px-2 py-2">
-                <div className={`${item.statusColor} h-2 rounded`}></div>
-              </td>
-              <td className="px-2 py-2">
-                <div className={`${item.statusColor} h-2 rounded`}></div>
-              </td>
-              <td className="px-2 py-2">
-                <div className={`${item.statusColor} h-2 rounded`}></div>
-              </td>
+
+              {/* Status columns for each day */}
+              {item.status.map((color, idx) => (
+                <td key={idx} className="px-2 py-2">
+                  <div className={`${color} h-2 rounded`}></div>
+                </td>
+              ))}
             </tr>
           ))}
         </tbody>
       </table>
+      <br/>
     </div>
   );
 };
