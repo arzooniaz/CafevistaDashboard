@@ -12,7 +12,7 @@ export default function NotifiCard({ prop, h, m, objKey }) {
 
     return (
         <div 
-            className="px-4 sm:px-10 py-4 sm:py-6 bg-white w-full max-w-[875px] flex flex-col" 
+            className="px-14 py-6 h-auto bg-white w-full w-[85vw] sm:w-[90vw] md:w-[90vw] lg:w-[75vw] xl:w-[75vw] max-w-[1100px] flex flex-col rounded-md" 
             style={cardStyle}
         >
             <h1 className="text-base sm:text-lg font-medium mb-4">{prop}</h1>

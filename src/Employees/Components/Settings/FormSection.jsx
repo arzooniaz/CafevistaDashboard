@@ -122,7 +122,7 @@ const FormSection = ({ profileData }) => {
                             </div>
                         ))}
                         <button
-                            className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-2"
+                            className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-0.5"
                         >
                             Save
                         </button>
@@ -142,7 +142,7 @@ const FormSection = ({ profileData }) => {
                             </div>
                         ))}
                         <button
-                            className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-2"
+                            className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-0.5"
                         >
                             Verify
                         </button>
