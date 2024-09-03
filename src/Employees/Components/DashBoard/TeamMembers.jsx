@@ -17,7 +17,12 @@ const TeamMembers = () => {
     <div className="px-3 py-3 max-w-md mx-auto bg-white rounded-lg shadow-md"> {/* Reduced padding and adjusted width */}
       <div className="flex justify-between items-center mb-3"> {/* Reduced margin */}
         <h2 className="text-base font-semibold">Team members</h2> {/* Reduced font size */}
-        <button className="text-xs text-gray-500">View all</button> {/* Reduced font size */}
+        <div className="flex items-center text-sm justify-center mt-1 text-black-100">
+        <p className="mr-1">View all</p>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div> 
       </div>
       <div className="grid gap-4"> {/* Reduced gap */}
         {teamMembers.map((member, index) => (

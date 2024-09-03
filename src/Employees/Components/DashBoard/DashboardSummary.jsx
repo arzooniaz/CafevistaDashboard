@@ -38,9 +38,14 @@ const DashboardSummary = () => {
       <table className="table-auto w-full text-left text-sm">
         <thead>
           <tr>
-            <th className="px-2 py-2 border-b border-gray-500 font-medium">Week1</th>
-            <th className="px-2 py-2 border-b border-gray-500 font-medium">Priority</th>
-            <th className="px-2 py-2 border-b border-gray-500 font-medium">Project</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-bold"><div className="flex items-center text-sm justify-center mt-1 text-black-100">
+        <p className="mr-1">Week1</p>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div></th>
+            <th className="px-2 py-2 border-b border-gray-500 font-bold">Priority</th>
+            <th className="px-2 py-2 border-b border-gray-500 font-bold">Project</th>
             <th className="px-2 py-2 border-b border-gray-500 font-medium">Aug1</th>
             <th className="px-2 py-2 border-b border-gray-500 font-medium">Aug2</th>
             <th className="px-2 py-2 border-b border-gray-500 font-medium">Aug3</th>

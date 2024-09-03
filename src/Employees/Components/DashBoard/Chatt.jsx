@@ -3,6 +3,9 @@ import { FaPhoneAlt, FaVideo } from "react-icons/fa";
 import { FiArrowRight,FiSend } from "react-icons/fi";
 import elipse5 from "../../Assets/Ellipse 4.png";
 import elipse3 from "../../Assets/Ellipse 27.png";
+import { IoMdAttach } from "react-icons/io";
+import { TbMoodHappy } from "react-icons/tb";
+import { TbSend2 } from "react-icons/tb";
 
 // Sample chat data
 const chatData = [
@@ -110,26 +113,24 @@ const Chatt = () => {
       </div>
 
       {/* Input field */}
-      <div className="border-t p-3">
-        <div className="flex items-center">
-          <input
-            type="text"
-            className="flex-1 bg-gray-100 rounded-full px-4 py-2 outline-none"
-            placeholder="Typing message..."
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={(e) => {
-              if (e.key === 'Enter') handleSendMessage();
-            }}
-          />
-         <button
-  className="ml-2 p-1 bg-blue-500 rounded-full text-white"
-  onClick={handleSendMessage}
->
-  <FiSend />
-</button>
+      <div className="send-functionality ">
+        <div className="send-input mt-4 px-1 py-2 border-primary-txt-dash border-[1px] rounded-lg flex justify-between items-center ">
+          <div className="attach-btn flex gap-1 items-center">
+            <IoMdAttach className=" text-primary-txt-dash cursor-pointer" />
+            <div className="input  ">
+              <input
+                type="text"
+                className="focus:outline-none appearance-none"
+                placeholder="Type Something here..."
+              />
+            </div>
+          </div>
+          <div className="send-emojis flex items-center gap-1">
+            <TbMoodHappy className=" text-primary-txt-dash cursor-pointer" />
+            <TbSend2 className=" text-primary-txt-dash cursor-pointer" />
+          </div>
         </div>
-      </div>
+    </div>
     </div>
   );
 };
