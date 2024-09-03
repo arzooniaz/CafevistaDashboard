@@ -55,7 +55,11 @@ const FormField = ({ label, value, onChange, isPasswordSection }) => {
         return (
             <input
                 {...inputProps}
-                type={label === "Phone" ? "number" : isPasswordSection ? "password" : "text"}
+                type={
+                    isPasswordSection
+                        ? label === "Phone no verification" ? "number" : "password"
+                        : label === "Phone" ? "number" : label === "Email" ? "email" : "text"
+                }
             />
         );
     };
@@ -104,53 +108,55 @@ const FormSection = ({ profileData }) => {
         </div>
     );
 
+    const renderPasswordSection = () => (
+        <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col gap-6 w-full sm:w-[45%]">
+                {profileData.btns.slice(0, 3).map((btnLabel, index) => (
+                    <div key={index} className="form-group">
+                        <div className="flex items-center justify-between mb-2">
+                            <label className="block text-sm font-medium text-gray-400">{btnLabel}</label>
+                        </div>
+                        <FormField
+                            label={btnLabel}
+                            value={formValues[btnLabel] || ''}
+                            onChange={handleChange}
+                            isPasswordSection={true}
+                        />
+                    </div>
+                ))}
+                <button
+                    className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-0.5"
+                >
+                    Save
+                </button>
+            </div>
+
+            <div className="flex flex-col gap-6 w-full sm:w-[45%]">
+                {profileData.btns.slice(3).map((btnLabel, index) => (
+                    <div key={index} className="form-group">
+                        <div className="flex items-center justify-between mb-2">
+                            <label className="block text-sm font-medium text-gray-400">{btnLabel}</label>
+                        </div>
+                        <FormField
+                            label={btnLabel}
+                            value={formValues[btnLabel] || ''}
+                            onChange={handleChange}
+                            isPasswordSection={true}
+                        />
+                    </div>
+                ))}
+                <button
+                    className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-0.5"
+                >
+                    Verify
+                </button>
+            </div>
+        </div>
+    );
+
     return (
         <div className="flex flex-col gap-4 justify-center">
-            {isPasswordSection ? (
-                <div className="flex flex-wrap gap-4 justify-center">
-                    <div className="flex flex-col gap-6 w-full sm:w-[45%]">
-                        {profileData.btns.slice(0, 3).map((btnLabel, index) => (
-                            <div key={index} className="form-group">
-                                <div className="flex items-center justify-between mb-2">
-                                    <label className="block text-sm font-medium text-gray-400">{btnLabel}</label>
-                                </div>
-                                <FormField
-                                    label={btnLabel}
-                                    value={formValues[btnLabel] || ''}
-                                    isPasswordSection={true}
-                                />
-                            </div>
-                        ))}
-                        <button
-                            className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-0.5"
-                        >
-                            Save
-                        </button>
-                    </div>
-
-                    <div className="flex flex-col gap-6 w-full sm:w-[45%]">
-                        {profileData.btns.slice(3).map((btnLabel, index) => (
-                            <div key={index} className="form-group">
-                                <div className="flex items-center justify-between mb-2">
-                                    <label className="block text-sm font-medium text-gray-400">{btnLabel}</label>
-                                </div>
-                                <FormField
-                                    label={btnLabel}
-                                    value={formValues[btnLabel] || ''}
-                                    isPasswordSection={true}
-                                />
-                            </div>
-                        ))}
-                        <button
-                            className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-0.5"
-                        >
-                            Verify
-                        </button>
-                    </div>
-                </div>
-            ) : (
-                renderProfileSection()
-            )}
+            {isPasswordSection ? renderPasswordSection() : renderProfileSection()}
         </div>
     );
 };
