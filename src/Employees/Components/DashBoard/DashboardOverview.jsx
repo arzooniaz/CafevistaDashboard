@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaHome, FaBars } from 'react-icons/fa'; // Importing icons
+import { FaHome, FaBars } from 'react-icons/fa'; 
+import { RxPerson } from "react-icons/rx";
 import elipse4 from "../../Assets/Ellipse 28.png";
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 
@@ -31,7 +32,7 @@ const DashboardOverview = () => {
                         <p className="text-gray-500">{item.label}</p>
                         {item.icons && (
                             <div className="absolute top-0 right-0 flex space-x-1">
-                                <FaHome className="text-gray-400 hover:text-black cursor-pointer" />
+                                
                                 <FaBars className="text-gray-400 hover:text-black cursor-pointer" />
                             </div>
                         )}
@@ -56,6 +57,7 @@ const DashboardOverview = () => {
                                     <p>{task.timeLeft}</p>
                                 </div>
                                 <div className="flex items-center mt-2">
+                                <RxPerson className='mr-1'/>
                                     <img
                                         src={task.avatar}
                                         alt="Avatar"
