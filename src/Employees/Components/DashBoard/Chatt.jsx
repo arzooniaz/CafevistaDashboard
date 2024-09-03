@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaPhoneAlt, FaVideo } from "react-icons/fa";
-import { FiArrowRight,FiSend } from "react-icons/fi";
-import elipse5 from "../../Assets/Ellipse 4.png";
-import elipse3 from "../../Assets/Ellipse 27.png";
+import { FiArrowRight, FiSend } from "react-icons/fi";
+import elipse5 from "../../Assets/Images/Ellipse 4.png";
+import elipse3 from "../../Assets/Images/Ellipse 27.png";
 import { IoMdAttach } from "react-icons/io";
 import { TbMoodHappy } from "react-icons/tb";
 import { TbSend2 } from "react-icons/tb";
@@ -46,11 +46,11 @@ const Chatt = () => {
           id: messages.length + 1,
           message: inputValue,
           time: new Date().toLocaleTimeString([], {
-            hour: '2-digit',
-            minute: '2-digit'
+            hour: "2-digit",
+            minute: "2-digit",
           }),
           isUser: true,
-          avatar: elipse5, 
+          avatar: elipse5,
         },
       ]);
       setInputValue("");
@@ -59,7 +59,6 @@ const Chatt = () => {
 
   return (
     <div className="max-wd mx-auto bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
-      
       <div className="flex items-center px-1 py-2 border-b">
         <img
           src={elipse3}
@@ -69,13 +68,13 @@ const Chatt = () => {
         <div className="ml-3 flex-1">
           <h3 className="font-bold text-lg">Elizabeth</h3>
         </div>
-        
+
         <div className="flex space-x-1">
           <button className="p-2 rounded-full hover:bg-gray-100">
             <FaPhoneAlt className="text-gray-600" />
           </button>
           <button className="p-2 rounded-full hover:bg-gray-100">
-            <FaVideo className="text-gray-600" />   
+            <FaVideo className="text-gray-600" />
           </button>
         </div>
       </div>
@@ -86,7 +85,9 @@ const Chatt = () => {
           {messages.map((msg) => (
             <div
               key={msg.id}
-              className={`flex ${msg.isUser ? "justify-end" : "justify-start"} items-end`}
+              className={`flex ${
+                msg.isUser ? "justify-end" : "justify-start"
+              } items-end`}
             >
               {!msg.isUser && (
                 <img
@@ -96,7 +97,11 @@ const Chatt = () => {
                 />
               )}
               <div
-                className={`max-w-xs ${msg.isUser ? "bg-gray-200 text-dark" : "bg-blue-900 text-white"} p-2 rounded-2xl text-sm shadow-md`}
+                className={`max-w-xs ${
+                  msg.isUser
+                    ? "bg-gray-200 text-dark"
+                    : "bg-blue-900 text-white"
+                } p-2 rounded-2xl text-sm shadow-md`}
               >
                 <p>{msg.message}</p>
               </div>
@@ -130,7 +135,7 @@ const Chatt = () => {
             <TbSend2 className=" text-primary-txt-dash cursor-pointer" />
           </div>
         </div>
-    </div>
+      </div>
     </div>
   );
 };

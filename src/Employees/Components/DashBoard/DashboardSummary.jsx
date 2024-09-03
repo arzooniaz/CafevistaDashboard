@@ -1,7 +1,7 @@
 import React from "react";
-import elipse1 from "../../Assets/Ellipse 16.png";
-import elipse2 from "../../Assets/Ellipse 27.png";
-import elipse3 from "../../Assets/Ellipse 28.png";
+import elipse1 from "../../Assets/Images/Ellipse 16.png";
+import elipse2 from "../../Assets/Images/Ellipse 27.png";
+import elipse3 from "../../Assets/Images/Ellipse 28.png";
 
 const DashboardSummary = () => {
   const summaryData = [

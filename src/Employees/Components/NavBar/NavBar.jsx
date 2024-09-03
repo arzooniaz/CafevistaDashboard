@@ -9,7 +9,7 @@ const NavBar = ({ activePageData }) => {
     <section id="navbar">
       <div
         id="top-nav-bar"
-        className="flex justify-between items-center pt-2 pb-1 pr-4"
+        className="flex px-2 justify-between items-center pt-2 pb-1 pr-4"
       >
         <div
           className="search-bar flex gap-2 items-center bg-input-primary rounded-lg py-1 px-2 border-2
@@ -35,9 +35,9 @@ const NavBar = ({ activePageData }) => {
       </div>
       <div
         id="sub-nav-bar"
-        className=" border-primary-txt-dash border-2 rounded-lg p-2 flex justify-between items-center"
+        className=" border-primary-txt-dash border-t-[1.5px] border-b-[1.5px] p-2 flex justify-between items-center"
       >
-        <div className="sub-nav-heading">
+        <div className="px-2 sub-nav-heading">
           <h2 className="flex items-center text-primary-txt-dash gap-2">
             <span>{<activePageData.logo className="w-4 h-4" />}</span>
             <span className="">{activePageData.title}</span>

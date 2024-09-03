@@ -1,4 +1,3 @@
-
 export const CardData = [
   {
     title: "Profile",
@@ -12,14 +11,7 @@ export const CardData = [
 ];
 
 export const ProfileData = {
-  btns: [
-    "First Name",
-    "Last Name",
-    "Email",
-    "Phone",
-    "Role",
-    "Country",
-  ],
+  btns: ["First Name", "Last Name", "Email", "Phone", "Role", "Country"],
 };
 
 export const PasswordData = {
@@ -32,14 +24,10 @@ export const PasswordData = {
 };
 export const NotificationData = {
   newActivities: [
-   "New comment by other member",
-   "Update in project",
-   "New member joined team",
-   "New page created in project",
+    "New comment by other member",
+    "Update in project",
+    "New member joined team",
+    "New page created in project",
   ],
-  noti: [
-    "Email Notification",
-    "Chat Notification",
-   ],
+  noti: ["Email Notification", "Chat Notification"],
 };
-

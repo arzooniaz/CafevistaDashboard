@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import companyLogo from "../../Assets/Final Logo.svg";
+import companyLogo from "../../Assets/Images/Final Logo.svg";
 import { navMenu } from "./Utilities";
 import { MdLogout } from "react-icons/md";
 
