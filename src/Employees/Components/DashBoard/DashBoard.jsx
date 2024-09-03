@@ -1,7 +1,7 @@
 import React from "react";
 import DashboardOverview from "./DashboardOverview";
 import TeamMembers from "./TeamMembers";
-import Calendar from "./Calendar";
+import Calendar from "./Calendar"; 
 import DashboardSummary from "./DashboardSummary";
 import Messages from "./Messages";
 import Chatt from "./Chatt";
@@ -24,9 +24,21 @@ const Dashboard = () => {
         <div className="md:col-span-3">
           <TeamMembers />
         </div>
+        <div className="md:col-span-3 overflow-auto"> {/* Added overflow-auto */}
+          <Calendar /> 
+        </div>
+      </div>
 
-        <div className=" sm:col-span-3">
-          <Calendar />
+      {/* Summary and Chat section */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div className="md:col-span-6">
+          <DashboardSummary />
+        </div>
+        <div className="md:col-span-3">
+          <Messages/>
+        </div>
+        <div className="md:col-span-3">
+          <Chatt/>
         </div>
       </div>
     </section>
