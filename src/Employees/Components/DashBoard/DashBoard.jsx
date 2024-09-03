@@ -24,34 +24,9 @@ const Dashboard = () => {
         <div className="md:col-span-3">
           <TeamMembers />
         </div>
-<<<<<<< HEAD
+
         <div className=" sm:col-span-3">
           <Calendar />
-=======
-        <div className="md:col-span-3 overflow-auto"> {/* Added overflow-auto */}
-          <Calendar /> 
->>>>>>> arslan
-        </div>
-      </div>
-
-      {/* Summary and Chat section */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <div className="md:col-span-6">
-          <DashboardSummary />
-        </div>
-<<<<<<< HEAD
-        <div className=" sm:col-span-3">
-          <Messages />
-        </div>
-        <div className=" sm:col-span-3">
-          <Chatt />
-=======
-        <div className="md:col-span-3">
-          <Messages/>
-        </div>
-        <div className="md:col-span-3">
-          <Chatt/>
->>>>>>> arslan
         </div>
       </div>
     </section>
@@ -59,4 +34,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
