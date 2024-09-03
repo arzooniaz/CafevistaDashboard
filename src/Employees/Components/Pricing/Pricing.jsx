@@ -3,6 +3,8 @@ import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import PricingCard from "./PricingCard"; // Ensure the path is correct
 import { cardData } from "./Utilities";
+import { IoIosArrowBack } from "react-icons/io";
+
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-[#032858] flex flex-col items-center p-6">
