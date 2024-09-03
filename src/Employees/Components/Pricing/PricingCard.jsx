@@ -2,7 +2,7 @@ import React from 'react';
 
 const PricingCard = ({ heading, price, description, additionalClasses }) => {
   return (
-    <div className={`bg-[#cccbcb] shadow-lg rounded-lg p-8 max-w-sm mx-auto ${additionalClasses}`}>
+    <div className={`bg-gray-100 shadow-lg rounded-lg p-8 max-w-sm mx-auto border-2 border-blue-800 ${additionalClasses}`}>
       <h2 className="text-xl font-bold text-gray-800 mb-2">{heading}</h2>
       <p className="text-sm font-bold text-gray-600 mb-4">{description}</p>
       

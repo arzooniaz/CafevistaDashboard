@@ -2,16 +2,17 @@ import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import PricingCard from "./PricingCard"; // Ensure the path is correct
 import { cardData } from "./Utilities";
+import { IoIosArrowBack } from "react-icons/io";
+
 const Pricing = () => {
   return (
-    <div className="min-h-screen bg-[#032858] flex flex-col items-center p-6">
-                 {/* Button at the top center */}
-      <div className="w-full flex justify-start mb-6">
-      <button className="flex items-center px-6 py-3 bg-[#cccbcb] text-gray-800 rounded-md hover:bg-gray-400 transition duration-300 ease-in-out">
-   
-<FaArrowLeft />
-          <span className="mr-2">Choose Your Plan</span>
-        </button>
+    <div className="min-h-screen bg-[#f9feff] flex flex-col items-center p-6">
+  {/* Button at the top center */}
+  <div className="w-full flex justify-start mb-6">
+    <button className="flex items-center px-6 py-3 bg-gray-100 text-gray-800 rounded-md border-2 border-blue-800 hover:bg-gray-400 transition duration-300 ease-in-out">
+    <IoIosArrowBack />
+      <span className="ml-2">Pricing</span>
+    </button>
       </div>
 
       {/* Pricing Cards */}
