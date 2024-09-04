@@ -96,7 +96,7 @@ const Chatt = () => {
                 />
               )}
               <div
-                className={`max-w-xs ${msg.isUser ? "bg-blue-600 text-white" : "bg-gray-200"} p-2 rounded-lg text-sm shadow-md`}
+                className={`max-w-xs ${msg.isUser ? "bg-gray-200 text-dark" : "bg-blue-900 text-white"} p-2 rounded-2xl text-sm shadow-md`}
               >
                 <p>{msg.message}</p>
               </div>

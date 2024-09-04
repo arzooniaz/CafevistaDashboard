@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaHome, FaBars } from 'react-icons/fa'; // Importing icons
+import { FaHome, FaBars } from 'react-icons/fa'; 
+import { RxPerson } from "react-icons/rx";
 import elipse4 from "../../Assets/Ellipse 28.png";
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 
@@ -56,6 +57,7 @@ const DashboardOverview = () => {
                                     <p>{task.timeLeft}</p>
                                 </div>
                                 <div className="flex items-center mt-2">
+                                <RxPerson className='mr-1'/>
                                     <img
                                         src={task.avatar}
                                         alt="Avatar"

@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaRegStickyNote, FaComments } from 'react-icons/fa';
+import { BsChatRight } from "react-icons/bs";
+import { IoClipboardOutline } from "react-icons/io5";
 import elipse1 from "../../Assets/Ellipse 16.png";
 import elipse3 from "../../Assets/Ellipse 27.png";
 import elipse4 from "../../Assets/Ellipse 28.png";
@@ -38,10 +40,10 @@ const TeamMembers = () => {
             </div>
             <div className="ml-3 flex space-x-2"> {/* Reduced margin */}
               <button className="p-1 rounded-full hover:bg-gray-200">
-                <FaRegStickyNote className="w-4 h-4" /> {/* Reduced icon size */}
+                <IoClipboardOutline  className="w-4 h-4" /> {/* Reduced icon size */}
               </button>
               <button className="p-1 rounded-full hover:bg-gray-200">
-                <FaComments className="w-4 h-4" /> {/* Reduced icon size */}
+                <BsChatRight className="w-4 h-4" /> {/* Reduced icon size */}
               </button>
             </div>
           </div>
