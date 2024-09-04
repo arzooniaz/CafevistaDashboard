@@ -16,6 +16,7 @@ const Calendar = () => {
   };
 
   return (
+    <div className="w-full h-full overflow-auto">
     <div className="max-w-lg mx-auto bg-white rounded-lg shadow-md p-4 text-xs"> {/* Restored max-width, reduced padding */}
       <div className="grid grid-cols-3 gap-1 mb-2"> {/* Reduced grid gap and margin bottom */}
         {dateRanges.map((range, index) => (
@@ -54,6 +55,7 @@ const Calendar = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

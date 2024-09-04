@@ -6,7 +6,6 @@ import DashboardSummary from "./DashboardSummary";
 import Messages from "./Messages";
 import Chatt from "./Chatt";
 
-
 const Dashboard = () => {
   const dashboardData = [
     { count: 32, label: "In progress" },
@@ -16,31 +15,33 @@ const Dashboard = () => {
   ];
 
   return (
-    <section className="Dashboard-page p-2">
-      <div className="dasboard-overview sm:grid grid-cols-12 gap-4">
-        <div className=" sm:col-span-6">
+    <section className="Dashboard-page p-4">
+      {/* Overview section */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
+        <div className="md:col-span-6">
           <DashboardOverview data={dashboardData} />
         </div>
-        <div className=" sm:col-span-3">
+        <div className="md:col-span-3">
           <TeamMembers />
         </div>
-        <div className=" sm:col-span-3">
+        <div className="md:col-span-3 overflow-auto"> {/* Added overflow-auto */}
           <Calendar /> 
         </div>
       </div>
-      <div className="dasboard-summary p-2 sm:grid grid-cols-12 gap-4">
-        <div className="sm:col-span-6">
+
+      {/* Summary and Chat section */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div className="md:col-span-6">
           <DashboardSummary />
         </div>
-        <div className=" sm:col-span-3">
+        <div className="md:col-span-3">
           <Messages/>
         </div>
-        <div className=" sm:col-span-3">
+        <div className="md:col-span-3">
           <Chatt/>
         </div>
       </div>
     </section>
-
   );
 };
 

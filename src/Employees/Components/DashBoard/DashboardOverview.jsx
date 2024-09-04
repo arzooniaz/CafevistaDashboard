@@ -32,7 +32,7 @@ const DashboardOverview = () => {
                         <p className="text-gray-500">{item.label}</p>
                         {item.icons && (
                             <div className="absolute top-0 right-0 flex space-x-1">
-                                <FaHome className="text-gray-400 hover:text-black cursor-pointer" />
+                                
                                 <FaBars className="text-gray-400 hover:text-black cursor-pointer" />
                             </div>
                         )}
