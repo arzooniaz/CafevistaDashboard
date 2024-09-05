@@ -16,7 +16,7 @@ const teamMembers = [
 
 const TeamMembers = () => {
   return (
-    <div className="px-3 py-3 max-w-md mx-auto bg-white rounded-lg shadow-md">
+    <div className="px-3 py-3 w-full md:max-w-md mx-auto bg-white rounded-lg shadow-md">
       {" "}
       {/* Reduced padding and adjusted width */}
       <div className="flex justify-between items-center mb-3">

@@ -37,8 +37,7 @@ const taskData = [
 
 const DashboardOverview = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-3 bg-white shadow rounded-lg ml-1">
-      {" "}
+    <div className="w-full px-4 py-3 bg-white shadow rounded-lg ml-1 ">
       {/* Set max-width to 5xl for a wider container */}
       <div className="flex justify-between items-center mb-4 border-b border-gray-500 pb-2">
         <h2 className="text-2xl font-bold">Dashboard</h2>

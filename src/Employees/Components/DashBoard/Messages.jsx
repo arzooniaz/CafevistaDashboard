@@ -38,7 +38,7 @@ const messages = [
 
 const Messages = () => {
   return (
-    <div className="max-w-sm mx-auto bg-white shadow-md rounded-lg p-4">
+    <div className="w-full md:max-w-sm mx-auto bg-white shadow-md rounded-lg p-4">
       <h2 className="text-lg font-bold mb-4">Messages</h2>
       <div className="grid gap-4">
         {messages.map((msg) => (

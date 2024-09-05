@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import SideBar from "../Components/SideBar/SideBar";
 import NavBar from "../Components/NavBar/NavBar";
 import { RiHomeLine, RiMenuLine } from "react-icons/ri"; // Import menu icon
-import Projects from "../Components/Projects/Projects";
-import { ChattingPage, DashBoard, Pricing, Settings } from "./Imports";
+import {
+  ChattingPage,
+  DashBoard,
+  Projects,
+  Settings,
+  Clients,
+  History,
+} from "./Imports";
 
-const EmployeeLayout = () => {
+const ManagerLayout = () => {
   const [activePageBtn, setActivePageBtn] = useState({
     title: "Dashboard",
     logo: RiHomeLine,
@@ -62,11 +68,12 @@ const EmployeeLayout = () => {
             <NavBar activePageData={activePageBtn} />
           </div>
           <div className="main-pages min-h-screen">
-            {activePageBtn.title === "Projects" && <Projects />}
-            {activePageBtn.title === "Chats" && <ChattingPage />}
+            {activePageBtn.title === "My Projects" && <Projects />}
+            {activePageBtn.title === "Chat" && <ChattingPage />}
             {activePageBtn.title === "Dashboard" && <DashBoard />}
-            {activePageBtn.title === "Pricing" && <Pricing />}
+            {activePageBtn.title === "Clients" && <Clients />}
             {activePageBtn.title === "Settings" && <Settings />}
+            {activePageBtn.title === "History" && <History />}
           </div>
         </div>
       </div>
@@ -74,4 +81,4 @@ const EmployeeLayout = () => {
   );
 };
 
-export default EmployeeLayout;
+export default ManagerLayout;
