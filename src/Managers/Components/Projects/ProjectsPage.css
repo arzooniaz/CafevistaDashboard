@@ -15,6 +15,8 @@
   border-radius: 10px;
   margin-bottom: 10px;
   width: 28%;
+  /* align-content: center; */
+  align-items: center;
 }
 
 .filter-section,
@@ -53,7 +55,7 @@ td {
 
 th {
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 td {

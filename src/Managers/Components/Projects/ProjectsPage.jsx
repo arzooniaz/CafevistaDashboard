@@ -70,8 +70,8 @@ const ProjectsPage = () => {
   return (
     <div className="projects-page">
       {/* Filter Section */}
-      <div className="Project-header">
-        <div className="filter-section">
+      <div className="Project-header mx-auto">
+        <div className="filter-section mx-auto">
           <label htmlFor="status-filter">Filter by Status:</label>
           <select
             name="choice"
@@ -98,7 +98,7 @@ const ProjectsPage = () => {
         </div>
       </div>
 
-      <div className="Project-table">
+      <div className="Project-table mx-auto">
         <table>
           <thead>
             <tr>
