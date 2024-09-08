@@ -7,8 +7,8 @@ import ManagerLayout from "./Managers/Layout/ManagerLayout";
 const App = () => {
   return (
     <>
-      {/* <EmployeeLayout /> */}
-      <ManagerLayout />
+      <EmployeeLayout />
+      {/* <ManagerLayout /> */}
     </>
   );
 };
