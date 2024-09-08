@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Quicksand";
+  /* src: url("./Employees/Assets/Fonts/Rubik-VariableFont_wght.ttf")
+    format("truetype");
+  src: url("./Employees/Assets/Fonts/Mingzat-Regular.ttf") format("truetype");
+  src: url("./Employees/Assets/Fonts/Poppins-Regular.ttf") format("truetype");
+  src: url("./Employees/Assets/Fonts/Roboto-Regular.ttf") format("truetype"); */
+  src: url("./Employees/Assets/Fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+  /* src: url("./Employees/Assets/Fonts/Quicksand-VariableFont_wght.ttf")
+    format("truetype"); */
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* font-family: "Quicksand", sans-serif; */
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
