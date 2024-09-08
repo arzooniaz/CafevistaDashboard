@@ -1,5 +1,5 @@
 // export { default as EmployeeLayout } from "./ManagerLayout";
-export { default as ChattingPage } from "../Components/Chatting/ChattingPage";
+export { default as ChattingPage } from "../Components/Chatting/ChatingPage";
 export { default as DashBoard } from "../Components/Dashboard/DashBoardPage";
 // export { default as Logout } from "../Components/Logout/Logout";
 export { default as Projects } from "../Components/Projects/ProjectsPage";

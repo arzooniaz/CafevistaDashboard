@@ -9,27 +9,28 @@ const NavBar = ({ activePageData }) => {
     <section id="navbar">
       <div
         id="top-nav-bar"
-        className="flex px-2 justify-between items-center pt-2 pb-1 pr-4"
+        className="flex px-2 gap-2 justify-between items-center pt-2 pb-1 pr-4"
       >
-        <div
-          className="search-bar flex gap-2 items-center bg-input-primary rounded-lg py-1 px-2 border-2
-         border-[#7A7A7A] cursor-pointer"
-        >
-          <IoSearchOutline />
+        <div className="search-bar w-52 sm:w-full grid grid-cols-6  gap-2  bg-input-primary rounded-lg py-1 px-2  cursor-pointer focus-within:outline">
+          <IoSearchOutline className="w-6 h-6 col-span-1" />
           <input
             type="text"
-            className="appearance-none bg-transparent border-none outline-none focus:ring-0 p-0 m-0"
+            className=" col-span-5 appearance-none text-black bg-transparent border-none outline-none focus:ring-0 p-0 m-0"
             placeholder="Search.."
           />
         </div>
         <div id="top-nav-btns" className="flex justify-around items-center">
           <div className="active-page-btn flex gap-2 items-center border-r-2 pr-4 border-r-black">
-            <span>{<activePageData.logo className="w-6 h-6" />}</span>
-            <span className="text-xl">{activePageData.title}</span>
+            <span>
+              {<activePageData.logo className="w-3 h-3 md:w-6  md:h-6" />}
+            </span>
+            <span className=" text-base md:text-xl">
+              {activePageData.title}
+            </span>
           </div>
           <div className="menu-btns flex justify-between items-center gap-2 px-2">
-            <IoNotificationsOutline className="w-6 h-6 cursor-pointer" />
-            <FaRegUserCircle className="w-6 h-6 cursor-pointer" />
+            <IoNotificationsOutline className="w-3 h-3 md:w-6  md:h-6 cursor-pointer" />
+            <FaRegUserCircle className="w-3 h-3 md:w-6  md:h-6 cursor-pointer" />
           </div>
         </div>
       </div>
