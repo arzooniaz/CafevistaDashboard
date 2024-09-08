@@ -32,11 +32,7 @@ const FormField = ({ label, value, onChange, isPasswordSection }) => {
                     name={label}
                     value={value}
                     onChange={onChange}
-<<<<<<< HEAD
-                    className="bg-white block h-10 w-full text-sm p-2 rounded-lg border border-gray-300 text-black"
-=======
                     className="bg-white block h-12 w-full text-[14px] p-2 rounded-lg border border-gray-300 text-black"
->>>>>>> 171c0f1 (Temporary commit to save changes)
                 >
                     <option value="" disabled>Select Country</option>
                     {countries.map((country) => (
@@ -52,11 +48,7 @@ const FormField = ({ label, value, onChange, isPasswordSection }) => {
             name: label,
             value: value,
             onChange: onChange,
-<<<<<<< HEAD
-            className: "bg-white block h-10 w-full text-sm p-2 rounded-lg border border-gray-300 text-black",
-=======
             className: "bg-white block h-12 w-full text-[14px] p-2 rounded-lg border border-gray-300 text-black",
->>>>>>> 171c0f1 (Temporary commit to save changes)
             placeholder: label === "Phone" ? "123-456-7890" : `Enter your ${label.toLowerCase()}`
         };
 
@@ -99,11 +91,7 @@ const FormSection = ({ profileData }) => {
                         <label className="block text-sm font-medium text-gray-400">{btnLabel}</label>
                         {btnLabel === "First Name" && (
                             <div className="flex items-center cursor-pointer group">
-<<<<<<< HEAD
-                                <CiEdit className="text-gray-400 ml-2 group-hover:text-black group-active:text-black" />
-=======
                                 <CiEdit className="text-sm text-gray-400 ml-2 group-hover:text-black group-active:text-black" />
->>>>>>> 171c0f1 (Temporary commit to save changes)
                                 <span className="text-sm font-sm text-gray-400 ml-1 group-hover:text-black group-active:text-black">
                                     Edit
                                 </span>
@@ -137,11 +125,7 @@ const FormSection = ({ profileData }) => {
                     </div>
                 ))}
                 <button
-<<<<<<< HEAD
-                    className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-0.5"
-=======
                     className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-3 sm:mt-0"
->>>>>>> 171c0f1 (Temporary commit to save changes)
                 >
                     Save
                 </button>
@@ -162,11 +146,7 @@ const FormSection = ({ profileData }) => {
                     </div>
                 ))}
                 <button
-<<<<<<< HEAD
-                    className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-0.5"
-=======
                     className="self-center border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-3 sm:mt-0"
->>>>>>> 171c0f1 (Temporary commit to save changes)
                 >
                     Verify
                 </button>
@@ -181,8 +161,4 @@ const FormSection = ({ profileData }) => {
     );
 };
 
-<<<<<<< HEAD
 export default FormSection;
-=======
-export default FormSection;
->>>>>>> 171c0f1 (Temporary commit to save changes)

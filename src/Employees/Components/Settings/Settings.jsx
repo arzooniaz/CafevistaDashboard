@@ -15,7 +15,7 @@ const Settings = () => {
   }
 
   return (
-    <section id="Settings" className="py-4 ml-6">
+    <section id="Settings" className="py-4 ml-0 md:ml-6">
       <button className="border-none bg-page-btn-secondary rounded-lg shadow-sm px-2 py-1 flex gap-2 items-center justify-between">
         <span>{<BsArrowLeft />}</span>
         <span>Settings</span>

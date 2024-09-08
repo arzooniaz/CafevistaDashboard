@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import companyLogo from "../../Assets/Final Logo.svg";
-=======
 import companyLogo from "../../Assets/Images/Final Logo.svg";
->>>>>>> 171c0f1 (Temporary commit to save changes)
 import { navMenu } from "./Utilities";
 import { MdLogout } from "react-icons/md";
 
@@ -12,11 +8,7 @@ const SideBar = ({ HandleActivePageBtn }) => {
   return (
     <section
       id="sidebar"
-<<<<<<< HEAD
-      className="h-screen bg-dash-primary pt-5 pb-10 text-primary-txt-dash flex flex-col justify-between"
-=======
       className="h-full  w-56 lg:w-full bg-dash-primary pt-5 pb-10 text-primary-txt-dash flex flex-col justify-between"
->>>>>>> 171c0f1 (Temporary commit to save changes)
     >
       <div>
         <div id="company-logo">

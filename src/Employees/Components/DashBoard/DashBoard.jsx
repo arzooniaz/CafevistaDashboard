@@ -1,12 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-
-const DashBoard = () => {
-  return <div></div>;
-};
-
-export default DashBoard;
-=======
 import DashboardOverview from "./DashboardOverview";
 import TeamMembers from "./TeamMembers";
 import Calendar from "./Calendar";
@@ -56,4 +48,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
->>>>>>> 171c0f1 (Temporary commit to save changes)

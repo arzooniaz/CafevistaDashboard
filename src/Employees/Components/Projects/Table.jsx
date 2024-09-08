@@ -8,38 +8,6 @@ const Table = ({ data }) => {
   const headers = Object.keys(data[0]);
 
   return (
-<<<<<<< HEAD
-    <div className="bg-white rounded-md p-4 shadow-md h-full">
-      <table className="w-full border border-gray-300">
-        <thead>
-          <tr>
-            {headers.map((header, index) => (
-              <th
-                key={index}
-                className="border border-gray-300 px-4 py-2 text-left bg-gray-100"
-              >
-                {header.charAt(0).toUpperCase() + header.slice(1)}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, index) => (
-            <tr key={index} className="hover:bg-gray-50">
-              {headers.map((header, i) => (
-                <td key={i} className="border border-gray-300 px-4 py-2">
-                  {header === "name" ? (
-                    <strong className="font-bold">{row[header]}</strong>
-                  ) : (
-                    row[header]
-                  )}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-=======
     <div className="bg-white rounded-md p-4 shadow-md h-full w-full">
       <div className="overflow-x-auto">
         <table className="table-auto w-full min-w-[640px] border border-gray-300">
@@ -73,7 +41,6 @@ const Table = ({ data }) => {
         </table>
       </div>
 
->>>>>>> 171c0f1 (Temporary commit to save changes)
       <div className="action-btns flex justify-between items-center py-2">
         <div className="action-left-btn">
           <button className="bg-white border-page-secondary border-[0.5px] p-2 rounded-lg font-semibold">

@@ -1,9 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-
-const Pricing = () => {
-  return <div></div>;
-=======
 import { FaArrowLeft } from "react-icons/fa";
 import PricingCard from "./PricingCard"; // Ensure the path is correct
 import { cardData } from "./Utilities";
@@ -52,7 +47,6 @@ const Pricing = () => {
       </div>
     </div>
   );
->>>>>>> 171c0f1 (Temporary commit to save changes)
 };
 
 export default Pricing;

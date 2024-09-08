@@ -1,36 +1,16 @@
 import React, { useState } from "react";
 import SideBar from "../Components/SideBar/SideBar";
 import NavBar from "../Components/NavBar/NavBar";
-<<<<<<< HEAD
-import { RiHomeLine } from "react-icons/ri";
-import Projects from "../Components/Projects/Projects";
-import Settings from "../Components/Settings/Settings";
-import { ChattingPage } from "../../Imports";
-=======
 import { RiHomeLine, RiMenuLine } from "react-icons/ri"; // Import menu icon
 import Projects from "../Components/Projects/Projects";
 import { ChattingPage, DashBoard, Pricing, Settings } from "./Imports";
 
->>>>>>> 171c0f1 (Temporary commit to save changes)
 const EmployeeLayout = () => {
   const [activePageBtn, setActivePageBtn] = useState({
     title: "Dashboard",
     logo: RiHomeLine,
   });
 
-<<<<<<< HEAD
-  function HandleActivePageBtn(pageData) {
-    setActivePageBtn(pageData);
-  }
-  return (
-    <section className="page-layout">
-      <div className="page-layout__header"></div>
-      <div className="page-layout__content grid lg:grid-cols-12">
-        <div className="sidebar  sm:col-span-3 lg:col-span-2 hidden lg:block ">
-          <SideBar HandleActivePageBtn={HandleActivePageBtn} />
-        </div>
-        <div className="content-area min-h-screen sm:col-span-9 lg:col-span-10 bg-page-secondary">
-=======
   // State for toggling the sidebar
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
@@ -78,18 +58,14 @@ const EmployeeLayout = () => {
             </button>
           </div>
 
->>>>>>> 171c0f1 (Temporary commit to save changes)
           <div className="nav-bar">
             <NavBar activePageData={activePageBtn} />
           </div>
           <div className="main-pages min-h-screen">
             {activePageBtn.title === "Projects" && <Projects />}
             {activePageBtn.title === "Chats" && <ChattingPage />}
-<<<<<<< HEAD
-=======
             {activePageBtn.title === "Dashboard" && <DashBoard />}
             {activePageBtn.title === "Pricing" && <Pricing />}
->>>>>>> 171c0f1 (Temporary commit to save changes)
             {activePageBtn.title === "Settings" && <Settings />}
           </div>
         </div>

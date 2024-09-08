@@ -1,13 +1,6 @@
 import React from "react";
 import Table from "./Table";
 import { InvoiceTableData } from "./Utilities";
-<<<<<<< HEAD
-const Invoice = () => {
-  return (
-    <div className="h-full">
-      <Table data={InvoiceTableData} />
-    </div>
-=======
 
 const Invoice = () => {
   return (
@@ -20,7 +13,6 @@ const Invoice = () => {
         <Table data={InvoiceTableData} />
       </div>
     </section>
->>>>>>> 171c0f1 (Temporary commit to save changes)
   );
 };
 
