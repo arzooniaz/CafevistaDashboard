@@ -1,12 +1,17 @@
 import React, { useState, useRef } from 'react';
 import FormSection from './FormSection.jsx';
 import { ProfileData } from "./Utilities";
+<<<<<<< HEAD
 import elipse16 from "../../Assets/Ellipse 16.png";
 import { MessagesData } from '../Chatting/Utilities';
+=======
+import defaultimg from "../../Assets/Images/default.png";
+>>>>>>> 171c0f1 (Temporary commit to save changes)
 import { FaCloudUploadAlt } from "react-icons/fa";
 
 export default function Profile() {
     const [profileData, setProfileData] = useState(ProfileData);
+<<<<<<< HEAD
     const [profileImage, setProfileImage] = useState(elipse16);
     const fileInputRef = useRef(null);
 
@@ -24,6 +29,11 @@ export default function Profile() {
         setProfileData({ ...profileData, ...profileData });
     };
 
+=======
+    const [profileImage, setProfileImage] = useState(defaultimg);
+    const fileInputRef = useRef(null);
+
+>>>>>>> 171c0f1 (Temporary commit to save changes)
     const handleImageChange = (event) => {
         const file = event.target.files[0];
         if (file) {
@@ -40,8 +50,12 @@ export default function Profile() {
     };
 
     return (
+<<<<<<< HEAD
         <div className="px-6 py-6 h-auto bg-white w-full w-[85vw] sm:w-[90vw] md:w-[90vw] lg:w-[75vw] xl:w-[75vw] max-w-[1200px] flex flex-col rounded-md"
 >
+=======
+        <div className="px-6 py-6 h-auto bg-white w-full max-w-[90vw] sm:max-w-[90vw] md:max-w-[90vw] lg:max-w-[75vw] xl:max-w-[75vw] flex flex-col rounded-md">
+>>>>>>> 171c0f1 (Temporary commit to save changes)
             <div className="relative self-center sm:self-start">
                 <img
                     src={profileImage}
@@ -66,8 +80,12 @@ export default function Profile() {
             </div>
             <FormSection profileData={profileData} />
             <button
+<<<<<<< HEAD
                 className="self-center sm:self-end border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-2.5 transform transition-transform duration-300 hover:scale-105"
                 onClick={handleSave}
+=======
+                className="self-center sm:self-end mr-0 sm:mr-8 border border-gray-300 px-3 py-2 rounded-md text-black font-bold mt-5 sm:mt-2.5"
+>>>>>>> 171c0f1 (Temporary commit to save changes)
             >
                 Save
             </button>
