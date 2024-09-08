@@ -18,3 +18,8 @@ const SettingCard = ({ CardData, HandleActiveCard, activeCard }) => {
 };
 
 export default SettingCard;
+
+
+
+
+

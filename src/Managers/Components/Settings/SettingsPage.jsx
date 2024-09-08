@@ -15,8 +15,8 @@ const SettingsPage = () => {
   }
 
   return (
-    <section id="Settings" className="py-4 ml-0 md:ml-6">
-    <div className="bg-white sm:w-[480px] w-[400px] h-[50px] flex flex-wrap justify-around items-center rounded-[7px]">
+    <section id="Settings" className="py-4 mr-6 ml-6 md:mr-6 md:ml-6">
+    <div className="bg-white sm:w-[480px] w-[200px] sm:h-[50px] h-[80px] flex flex-wrap justify-around items-center rounded-[7px] m-auto sm:m-0">
         {CardData.map((elem, index) => (
             <SettingCard
                 CardData={elem}
@@ -38,3 +38,8 @@ const SettingsPage = () => {
 };
 
 export default SettingsPage;
+
+
+
+
+
