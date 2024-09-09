@@ -8,7 +8,7 @@ import {
   Projects,
   Settings,
   Clients,
-  History,
+  ProjectsHistory,
 } from "./Imports";
 
 const ManagerLayout = () => {
@@ -30,7 +30,7 @@ const ManagerLayout = () => {
     Dashboard: <DashBoard />,
     Clients: <Clients />,
     Settings: <Settings />,
-    History: <History />,
+    History: <ProjectsHistory />,
   };
 
   return (
@@ -57,7 +57,7 @@ const ManagerLayout = () => {
           style={{ left: "14rem" }}
         ></div>
 
-        <div className="content-area min-h-screen sm:col-span-9 lg:col-span-10 bg-page-secondary relative">
+        <div className="content-area min-h-screen sm:col-span-9 lg:col-span-10 bg-page-secondary">
           <div className="lg:hidden p-4">
             <button
               onClick={() => setIsSidebarVisible(!isSidebarVisible)}

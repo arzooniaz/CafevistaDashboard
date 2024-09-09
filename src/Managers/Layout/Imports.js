@@ -5,4 +5,4 @@ export { default as DashBoard } from "../Components/Dashboard/DashBoard";
 export { default as Projects } from "../Components/Projects/ProjectsPage";
 export { default as Settings } from "../Components/Settings/SettingsPage";
 export { default as Clients } from "../Components/Clients/ClientsPage";
-export { default as History } from "../Components/History/ProjectHistory";
+export { default as ProjectsHistory } from "../Components/History/History";

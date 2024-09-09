@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectHistory = () => {
+const ProjectsHistory = () => {
   // Example project data array
   const projects = [
     {
@@ -43,6 +43,13 @@ const ProjectHistory = () => {
   return (
     <div className="p-4">
       {/* Save Button with Arrow */}
+      <button
+        className="px-4 py-2 bg-gray-300 rounded-md font-bold flex items-center gap-2 hover:bg-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+        onClick={() => alert("Save functionality coming soon!")} // Sample action
+      >
+        &#8592; {/* Unicode for left arrow */}
+        History
+      </button>
 
       <div className="bg-gray-50 p-4 rounded-md shadow-md mt-6 overflow-x-auto">
         <h2 className="text-lg font-semibold mb-4">Project History</h2>
@@ -92,4 +99,4 @@ const ProjectHistory = () => {
   );
 };
 
-export default ProjectHistory;
+export default ProjectsHistory;
