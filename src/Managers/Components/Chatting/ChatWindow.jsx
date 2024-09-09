@@ -11,7 +11,7 @@ const ChatWindow = ({
   HandleBackFunctionality,
 }) => {
   return (
-    <section className="Chat-Whindow min-h-screen  relative bg-white rounded-md flex flex-col">
+    <section className="Chat-Whindow min-h-screen  relative bg-white rounded-md flex flex-col justify-between">
       <div className="heading-chat py-2 px-1 z-10 flex items-center gap-3 border-[#D8D8D8] rounded-lg border-b-[1.5px]">
         <div className="back-btn block lg:hidden">
           <button className="" onClick={HandleBackFunctionality}>

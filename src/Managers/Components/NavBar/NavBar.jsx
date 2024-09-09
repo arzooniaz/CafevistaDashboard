@@ -11,11 +11,11 @@ const NavBar = ({ activePageData }) => {
         id="top-nav-bar"
         className="flex px-2 gap-2 justify-between items-center pt-2 pb-1 pr-4"
       >
-        <div className="search-bar w-52 sm:w-full grid grid-cols-6  gap-2  bg-input-primary rounded-lg py-1 px-2  cursor-pointer focus-within:outline">
-          <IoSearchOutline className="w-6 h-6 col-span-1" />
+        <div className="search-bar w-full flex items-center   gap-2  bg-input-primary rounded-lg py-1 px-2  cursor-pointer focus-within:outline">
+          <IoSearchOutline className="w-6 h-6 " />
           <input
             type="text"
-            className=" col-span-5 appearance-none text-black bg-transparent border-none outline-none focus:ring-0 p-0 m-0"
+            className="  appearance-none text-black bg-transparent border-none outline-none focus:ring-0 p-0 m-0"
             placeholder="Search.."
           />
         </div>
