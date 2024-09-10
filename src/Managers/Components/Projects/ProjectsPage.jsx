@@ -70,8 +70,7 @@ const ProjectsPage = () => {
   return (
     <div className="md:p-[20px] lg:p-[20px]">
       {/* Filter Section */}
-      <div className="bg-white pt-2 pb-[2px] w-48 p-5 ml-[110px] mt-3 rounded-xl mb-3 md:pt-[10px] md:pr-[10px] md:pb-[10px] md:pl-[20px] md:rounded-[10px] md:mb-[10px] md:w-[28%] md:mx-auto">
-
+      <div className="bg-white pt-2 pb-[2px] w-48 p-5 ml-[110px] mt-3 rounded-lg mb-3 md:pt-[10px] md:pr-[10px] md:pb-[10px] md:pl-[20px] md:rounded-[10px] md:mb-[10px] md:w-[28%] md:mx-auto">
         <div className="mb-2 md:mb-[10px]">
           <label className="md:mr-[10px]" htmlFor="status-filter">
             Filter by Status:
@@ -105,100 +104,92 @@ const ProjectsPage = () => {
         </div>
       </div>
 
-      <div className="table-fix ml-[27px] w-[75%] md:mx-auto md:bg-white md:p-[20px] md:rounded-xl md:w-[89%]">
-        <table className="min-w-full table-auto border-collapse md:w-full md:border-collapse">
-          <thead className="hidden md:table-header-group">
-            <tr>
-              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
-                Project Name
-              </th>
-              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
-                Description
-              </th>
-              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
-                Manager
-              </th>
-              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
-                Email
-              </th>
-              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
-                Team Member
-              </th>
-              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
-                Budget
-              </th>
-              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
-                Status
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredProjects.map((project, index) => (
-              <tr
-                key={index}
-                className="bg-white block md:table-row mb-4 md:mb-0"
-              >
-                <td
-                  className="bg-[#bebebe] block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
-                  data-label="Project Name"
-                >
-                  <span className="md:hidden font-bold ">Project Name: </span>
-                  {project.name}
-                </td>
-                <td
-                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
-                  data-label="Description"
-                >
-                  <span className="md:hidden font-bold">Description: </span>
-                  {project.description}
-                </td>
-                <td
-                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
-                  data-label="Manager"
-                >
-                  <span className="md:hidden font-bold">Manager: </span>
-                  {project.manager}
-                </td>
-                <td
-                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
-                  data-label="Email"
-                >
-                  <span className="md:hidden font-bold">Email: </span>
-                  {project.email}
-                </td>
-                <td
-                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
-                  data-label="Team Member"
-                >
-                  <span className="md:hidden font-bold">Team Member: </span>
-                  {project.teamMembers.map((member, i) => (
-                    <div key={i}>
-                      {member} ({project.emails[i]})
-                    </div>
-                  ))}
-                </td>
-                <td
-                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
-                  data-label="Budget"
-                >
-                  <span className="md:hidden font-bold">Budget: </span>
-                  {project.budget}
-                </td>
-                <td
-                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
-                  data-label="Status"
-                >
-                  <span className="md:hidden font-bold">Status: </span>
-                  <span
-                    className={`status ${project.status.toLowerCase()} px-2 py-1 rounded-lg md:px-[13px] md:py-[5px] md:rounded-[30px] md:font-semibold`}
-                  >
-                    {project.status}
-                  </span>
-                </td>
+      <div className="grid sm:grid-cols-12 pl-5 pr-5 pt-2">
+        <div className="p-4 overflow-x-auto sm:col-span-12 bg-white rounded-lg md:mx-auto md:bg-white md:p-[20px] md:rounded-xl md:w-[89%]">
+          <table className="justify-center min-w-full border-none outline-none table-auto md:w-full md:border-collapse">
+            <thead className="md:table-header-group">
+              <tr>
+                <th className="text-nowrap px-6 py-2 text-center md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                  Project Name
+                </th>
+                <th className="px-6 py-2 text-center md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                  Description
+                </th>
+                <th className="px-6 py-2 text-center md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                  Manager
+                </th>
+                <th className="px-6 py-2 text-center md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                  Email
+                </th>
+                <th className="px-6 py-2 text-center md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                  Team Member
+                </th>
+                <th className="px-6 py-2 text-center md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                  Budget
+                </th>
+                <th className="px-6 py-2 text-center md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                  Status
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {filteredProjects.map((project, index) => (
+                <tr key={index} className="border-t-2 border-gray-300 bg-white md:table-row md:mb-0">
+                  <td
+                    className="px-6 py-2 text-center md:table-cell md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                    data-label="Project Name"
+                  >
+                    {project.name}
+                  </td>
+                  <td
+                    className="text-balance px-6 py-2 text-center md:table-cell md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                    data-label="Description"
+                  >
+                    {project.description}
+                  </td>
+                  <td
+                    className="px-6 py-2 text-center md:table-cell md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                    data-label="Manager"
+                  >
+                    {project.manager}
+                  </td>
+                  <td
+                    className="px-6 py-2 text-center md:table-cell md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                    data-label="Email"
+                  >
+                    {project.email}
+                  </td>
+                  <td
+                    className="text-nowrap px-6 py-2 text-center md:table-cell md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                    data-label="Team Member"
+                  >
+                    {project.teamMembers.map((member, i) => (
+                      <div key={i}>
+                        {member} ({project.emails[i]})
+                      </div>
+                    ))}
+                  </td>
+                  <td
+                    className="px-6 py-2 text-center md:table-cell md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                    data-label="Budget"
+                  >
+                    {project.budget}
+                  </td>
+                  <td
+                    className="px-6 py-2 text-center md:table-cell md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                    data-label="Status"
+                  >
+                    <span
+                      className={`status ${project.status.toLowerCase()} px-[13px] py-[5px] rounded-[30px] font-semibold md:px-[13px] md:py-[5px] md:rounded-[30px] md:font-semibold`}
+                    >
+                      {project.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
