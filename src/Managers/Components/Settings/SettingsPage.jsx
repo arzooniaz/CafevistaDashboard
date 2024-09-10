@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SettingCard from "./SettingCard";
-import { BsArrowLeft } from "react-icons/bs";
 import { CardData } from "./Utilities";
 import Profile from "./Profile";
 import Password from "./Password";
@@ -8,6 +7,7 @@ import Notification from "./Notification";
 import Team from "./Team";
 
 const SettingsPage = () => {
+ 
   const [activeCard, setActiveCard] = useState("Profile");
 
   function HandleActiveCard(activePage) {
@@ -15,17 +15,17 @@ const SettingsPage = () => {
   }
 
   return (
-    <section id="Settings" className="py-4 ml-4 md:ml-6">
-      <div className="bg-white sm:w-[480px] w-[400px] h-[50px] flex flex-wrap justify-around items-center rounded-[7px]">
+    <section id="Settings" className="py-4 mr-6 ml-6 md:mr-6 md:ml-6">
+    <div className="bg-white sm:w-[480px] w-[200px] sm:h-[50px] h-[80px] flex flex-wrap justify-around items-center rounded-[7px] m-auto sm:m-0">
         {CardData.map((elem, index) => (
-          <SettingCard
-            CardData={elem}
-            key={index}
-            HandleActiveCard={HandleActiveCard}
-            activeCard={activeCard}
-          />
+            <SettingCard
+                CardData={elem}
+                key={index}
+                HandleActiveCard={HandleActiveCard}
+                activeCard={activeCard}
+            />
         ))}
-      </div>
+    </div>
 
       <div className="active-card-page mt-5">
         {activeCard === "Profile" && <Profile />}
@@ -38,3 +38,8 @@ const SettingsPage = () => {
 };
 
 export default SettingsPage;
+
+
+
+
+

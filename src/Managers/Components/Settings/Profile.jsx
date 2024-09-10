@@ -25,7 +25,7 @@ export default function Profile() {
     };
 
     return (
-        <div className="px-6 py-6 h-auto bg-white w-full max-w-[90vw] sm:max-w-[90vw] md:max-w-[90vw] lg:max-w-[75vw] xl:max-w-[75vw] flex flex-col rounded-md">
+        <div className="px-6 py-6 h-auto bg-white w-full max-w-[100vw] sm:max-w-[90vw] md:max-w-[90vw] lg:max-w-[75vw] xl:max-w-[75vw] flex flex-col rounded-md">
             <div className="relative self-center sm:self-start">
                 <img
                     src={profileImage}

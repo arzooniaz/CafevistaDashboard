@@ -1,49 +1,5 @@
 import React from "react";
-
-const clients = [
-  {
-    name: "Bessie Cooper",
-    id: "023556",
-    requestDate: "22/05/2024",
-    imageUrl:
-      "https://thumbs.dreamstime.com/z/old-businessman-portrait-executive-salesman-standing-office-business-people-47156049.jpg",
-  },
-  {
-    name: "Aurora",
-    id: "236664",
-    requestDate: "12/11/2022",
-    imageUrl:
-      "https://thumbs.dreamstime.com/z/successful-businesswoman-workplace-waist-up-portrait-contemporary-businesswoman-using-laptop-working-office-copy-139059697.jpg",
-  },
-  {
-    name: "Elizabeth",
-    id: "467323",
-    requestDate: "02/07/2021",
-    imageUrl:
-      "https://citygirlbusinessclub.com/wp-content/uploads/2017/01/1-1024x690.jpg",
-  },
-  {
-    name: "William",
-    id: "324947",
-    requestDate: "31/05/2021",
-    imageUrl:
-      "https://thumbs.dreamstime.com/b/give-success-your-best-shot-young-businessman-using-laptop-sofa-modern-office-give-success-your-best-shot-young-259877722.jpg",
-  },
-  {
-    name: "John",
-    id: "232271",
-    requestDate: "31/05/2021",
-    imageUrl:
-      "https://thumbs.dreamstime.com/z/portrait-old-businessman-working-laptop-isolated-white-background-162376564.jpg",
-  },
-  {
-    name: "Olivia Cooper",
-    id: "276658",
-    requestDate: "31/05/2021",
-    imageUrl: "https://wallpapercave.com/wp/wp5711116.jpg",
-  },
-];
-
+import { clients } from "./Utilities";
 const ClientPage = () => {
   return (
     <div className="flex min-h-screen bg-white">
@@ -53,7 +9,6 @@ const ClientPage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {clients.map((client, index) => (
             <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
-              {" "}
               <img
                 src={client.imageUrl}
                 alt={client.name}

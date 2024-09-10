@@ -8,7 +8,7 @@ const SideBar = ({ HandleActivePageBtn }) => {
   return (
     <section
       id="sidebar"
-      className="h-full  w-56 lg:w-full bg-dash-primary pt-5 pb-10 text-primary-txt-dash flex flex-col justify-between"
+      className="h-full w-44 md:w-56 lg:w-full bg-dash-primary pt-5 pb-10 text-primary-txt-dash flex flex-col justify-between"
     >
       <div>
         <div id="company-logo">
@@ -33,7 +33,7 @@ const SideBar = ({ HandleActivePageBtn }) => {
                       setIsActive(elem.title);
                       HandleActivePageBtn(elem);
                     }}
-                    className={`flex cursor-pointer py-2 px-10 items-center gap-3 hover:bg-hover-primary group w-auto mx-auto rounded-md ${
+                    className={`flex cursor-pointer py-2 px-5 md:px-10 items-center gap-3 hover:bg-hover-primary group w-auto mx-auto rounded-md ${
                       isActive === elem.title ? "bg-hover-primary " : ""
                     }`}
                   >

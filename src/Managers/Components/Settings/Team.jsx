@@ -31,7 +31,7 @@ export default function Team() {
     };
 
     return (
-        <div className="px-4 sm:px-6 py-6 h-auto lg:h-[526px] bg-white w-full max-w-[90vw] sm:max-w-[90vw] lg:max-w-[75vw] xl:max-w-[75vw] flex flex-col rounded-md">
+        <div className="px-4 sm:px-6 py-6 h-auto lg:h-[526px] bg-white w-full max-w-[100vw] sm:max-w-[90vw] lg:max-w-[75vw] xl:max-w-[75vw] flex flex-col rounded-md">
             <h1 className="text-xl sm:text-2xl font-bold mb-4">Team Setting</h1>
             <div className="relative overflow-y-none">
                 <table className="min-w-full table-auto border-collapse">
