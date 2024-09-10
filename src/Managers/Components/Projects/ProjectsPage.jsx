@@ -68,14 +68,16 @@ const ProjectsPage = () => {
       : projects.filter((project) => project.status === filterStatus);
 
   return (
-    <div className="projects-page">
+    <div className="md:p-[20px] lg:p-[20px]">
       {/* Filter Section */}
-      <div className="Project-header mx-auto">
-        <div className="filter-section mx-auto">
-          <label htmlFor="status-filter">Filter by Status:</label>
+      <div className="bg-white pt-2 pb-[2px] w-48 p-5 ml-[110px] mt-3 rounded-xl mb-3 md:pt-[10px] md:pr-[10px] md:pb-[10px] md:pl-[20px] md:rounded-[10px] md:mb-[10px] md:w-[28%] md:mx-auto">
+
+        <div className="mb-2 md:mb-[10px]">
+          <label className="md:mr-[10px]" htmlFor="status-filter">
+            Filter by Status:
+          </label>
           <select
             name="choice"
-            autofocus="autofocus"
             id="status-filter"
             onChange={handleFilterChange}
           >
@@ -86,48 +88,110 @@ const ProjectsPage = () => {
             <option value="Unpaid">Unpaid</option>
           </select>
         </div>
-
         {/* Sort Section */}
-        <div className="sort-section">
-          <button onClick={() => handleSort("budget")}>
+        <div className="md:mb-[10px]">
+          <button
+            className="bg-[#f0f0f0] hover:bg-[#ddd] mb-3 rounded-lg p-[6px] md:mr-[10px] md:pt-[5px] md:pb-[5px] md:pr-[10px] md:pl-[10px] md:cursor-pointer md:rounded-[7.5px] md:hover:bg-[#ddd]"
+            onClick={() => handleSort("budget")}
+          >
             Sort by Budget {sortOrder === "asc" ? "▲" : "▼"}
           </button>
-          <button onClick={() => handleSort("status")}>
+          <button
+            className="bg-[#f0f0f0] hover:bg-[#ddd] mb-3 rounded-lg p-[6px] md:mr-[10px] md:pt-[5px] md:pb-[5px] md:pr-[10px] md:pl-[10px] md:cursor-pointer md:rounded-[7.5px] md:hover:bg-[#ddd]"
+            onClick={() => handleSort("status")}
+          >
             Sort by Status {sortOrder === "asc" ? "▲" : "▼"}
           </button>
         </div>
       </div>
 
-      <div className="Project-table mx-auto">
-        <table>
-          <thead>
+      <div className="table-fix ml-[27px] w-[75%] md:mx-auto md:bg-white md:p-[20px] md:rounded-xl md:w-[89%]">
+        <table className="min-w-full table-auto border-collapse md:w-full md:border-collapse">
+          <thead className="hidden md:table-header-group">
             <tr>
-              <th>Project Name</th>
-              <th>Description</th>
-              <th>Manager</th>
-              <th>Email</th>
-              <th>Team Member</th>
-              <th>Budget</th>
-              <th>Status</th>
+              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                Project Name
+              </th>
+              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                Description
+              </th>
+              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                Manager
+              </th>
+              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                Email
+              </th>
+              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                Team Member
+              </th>
+              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                Budget
+              </th>
+              <th className="px-4 py-2 text-left md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-extrabold md:text-base">
+                Status
+              </th>
             </tr>
           </thead>
           <tbody>
             {filteredProjects.map((project, index) => (
-              <tr key={index}>
-                <td data-label="Project Name">{project.name}</td>
-                <td data-label="Description">{project.description}</td>
-                <td data-label="Manager">{project.manager}</td>
-                <td data-label="Email">{project.email}</td>
-                <td data-label="Team Member">
+              <tr
+                key={index}
+                className="bg-white block md:table-row mb-4 md:mb-0"
+              >
+                <td
+                  className="bg-[#bebebe] block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                  data-label="Project Name"
+                >
+                  <span className="md:hidden font-bold ">Project Name: </span>
+                  {project.name}
+                </td>
+                <td
+                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                  data-label="Description"
+                >
+                  <span className="md:hidden font-bold">Description: </span>
+                  {project.description}
+                </td>
+                <td
+                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                  data-label="Manager"
+                >
+                  <span className="md:hidden font-bold">Manager: </span>
+                  {project.manager}
+                </td>
+                <td
+                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                  data-label="Email"
+                >
+                  <span className="md:hidden font-bold">Email: </span>
+                  {project.email}
+                </td>
+                <td
+                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                  data-label="Team Member"
+                >
+                  <span className="md:hidden font-bold">Team Member: </span>
                   {project.teamMembers.map((member, i) => (
                     <div key={i}>
                       {member} ({project.emails[i]})
                     </div>
                   ))}
                 </td>
-                <td data-label="Budget">{project.budget}</td>
-                <td data-label="Status">
-                  <span className={`status ${project.status.toLowerCase()}`}>
+                <td
+                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                  data-label="Budget"
+                >
+                  <span className="md:hidden font-bold">Budget: </span>
+                  {project.budget}
+                </td>
+                <td
+                  className="block md:table-cell px-4 py-2 border-t border-gray-200 md:border-[2.5px] md:border-[#bebebe] md:p-[8px] md:text-center md:font-semibold"
+                  data-label="Status"
+                >
+                  <span className="md:hidden font-bold">Status: </span>
+                  <span
+                    className={`status ${project.status.toLowerCase()} px-2 py-1 rounded-lg md:px-[13px] md:py-[5px] md:rounded-[30px] md:font-semibold`}
+                  >
                     {project.status}
                   </span>
                 </td>
