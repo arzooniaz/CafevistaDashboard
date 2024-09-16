@@ -13,7 +13,7 @@ import {
 
 const ManagerLayout = () => {
   const [activePageBtn, setActivePageBtn] = useState({
-    title: "History",
+    title: "Dashboard",
     logo: RiHomeLine,
   });
 

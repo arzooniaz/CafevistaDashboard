@@ -4,6 +4,7 @@ import ManagerLayout from "./Managers/Layout/ManagerLayout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
 import { RegisterUser, History } from "./Managers/Layout/Imports";
+import CreateNewProjectPage from "./Employees/Components/Projects/CreateNewProject/CreateNewProjectPage";
 
 const App = () => {
   return (
@@ -11,9 +12,10 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/reg" element={<RegisterUser />} />
-          <Route path="/" element={<ManagerLayout />} />
-          <Route path="/EmployeeSide" element={<EmployeeLayout />} />
+          <Route path="/ManagerSide" element={<ManagerLayout />} />
+          <Route path="/emp" element={<EmployeeLayout />} />
           <Route path="/hist" element={<History />} />
+          <Route path="/" element={<CreateNewProjectPage />} />
         </Routes>
       </BrowserRouter>
     </>

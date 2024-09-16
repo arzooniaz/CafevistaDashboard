@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import BtnCard from "./BtnCard";
 import { CardData } from "./Utilities";
-import { BsArrowLeft } from "react-icons/bs";
+import { FaCirclePlus } from "react-icons/fa6";
 import Details from "./Details";
 import Requirements from "./Requirements";
 import Teams from "./Teams";
 import Settings from "./Settings";
 import Invoice from "./Invoice";
-const Projects = () => {
+const Projects = ({ HandleCreateNewProjectScreen }) => {
   const [activeCard, setActiveCard] = useState("Details");
 
   function HandleActiveCard(activePage) {
@@ -16,9 +16,12 @@ const Projects = () => {
 
   return (
     <section id="Projects" className="py-4">
-      <div className="top-btn pb-2">
-        <button className=" border-none bg-page-btn-secondary rounded-lg shadow-sm px-2 py-1 flex gap-2 items-center justify-between">
-          <span>{<BsArrowLeft />}</span>
+      <div className="top-btn p-2">
+        <button
+          className=" border-none bg-page-btn-secondary rounded-lg shadow-sm px-2 py-1 flex gap-2 items-center justify-between"
+          onClick={HandleCreateNewProjectScreen}
+        >
+          <span>{<FaCirclePlus className="text-primary w-5 h-5" />}</span>
           <span>Create New Project</span>
         </button>
       </div>
